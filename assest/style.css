@@ -1,0 +1,267 @@
+/*
+*
+*
+    - Read Me Before Editing,
+      After Each Section There is a media query
+*
+* 
+*/
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+}
+body {
+	background-color: #1a1a1a;
+	color: #eee;
+	font-family: "Roboto", sans-serif;
+}
+
+.container {
+	padding: 0 15px;
+	margin: 0 auto;
+}
+/* Small */
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+}
+/* Medium */
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+/* Large */
+@media (min-width: 1200px) {
+	.container {
+		width: 960px;
+	}
+}
+@media (min-width: 1400px) {
+	.container {
+		width: 1280px;
+	}
+}
+
+/* ==========[ Main Section ]========== */
+.background {
+	max-width: 100%;
+	min-height: 100vh;
+	background-image: url(../images/background.jpg);
+	background-size: cover;
+}
+header {
+	width: 75%;
+	height: 7.75rem;
+	margin: auto;
+	padding: 3.775rem 1.25rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header h1 {
+	font-size: 2.1875rem;
+	filter: blur(5px);
+	-webkit-filter: blur(1.8px);
+	scale: 0.8;
+}
+header a {
+	color: #eee;
+	font-weight: 500;
+	background-color: #1a1a1a;
+	font-size: 1.25rem;
+	padding: 0.9375rem 1.875rem;
+	border-radius: 0.625rem;
+	filter: blur(5px);
+	-webkit-filter: blur(1.8px);
+	scale: 0.8;
+}
+main {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+	gap: 10%;
+	min-height: calc(100vh - 124px);
+	padding: 4.375rem;
+}
+main .text {
+	display: grid;
+	align-content: center;
+}
+main .text h2 {
+	font-size: 1.75rem;
+	font-weight: 400;
+}
+main .text p {
+	font-size: 1.125rem;
+	line-height: 1.5;
+	margin: 1.5625rem 0;
+}
+main .text a {
+	width: fit-content;
+	color: #eee;
+	background-color: #1a1a1a;
+	font-size: 1.4375rem;
+	padding: 0.9375rem 3.125rem;
+	letter-spacing: 0.125rem;
+	margin: 1.25rem auto 0;
+	border-radius: 10px;
+	filter: blur(5px);
+	-webkit-filter: blur(1.8px);
+	scale: 0.8;
+}
+main .image {
+	overflow: hidden;
+	border-radius: 0.625rem;
+	-webkit-border-radius: 0.625rem;
+	-moz-border-radius: 0.625rem;
+	-ms-border-radius: 0.625rem;
+	-o-border-radius: 0.625rem;
+}
+main .image img {
+  max-width: 100%;
+  min-height: 100%;
+}
+/*
+  Start Animation
+*/
+header h1,
+header a,
+main .text a,
+main .image,
+main .image img {
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+header h1:hover,
+header a:hover,
+main .text a:hover {
+	filter: none;
+	scale: 1;
+	-webkit-filter: none;
+}
+main .image:hover img {
+	rotate: 5deg;
+	scale: 1.1;
+}
+main .image:hover {
+	box-shadow: 0 0 50px 10px #1a1a1a;
+}
+/*
+  End Animation
+*/
+/*
+  Start Media
+*/
+@media (min-width: 1400px) {
+	main .text h2 {
+		font-size: 2.15rem;
+		font-weight: 400;
+	}
+	main .text p {
+		font-size: 1.525rem;
+		line-height: 1.5;
+		margin: 1.5625rem 0;
+	}
+}
+@media (max-width: 991px) {
+	header {
+		padding: 0.975rem 1.25rem 0;
+	}
+	main {
+		padding: 4.375rem 0;
+	}
+	main .text h2 {
+		font-size: 1.35rem;
+	}
+	main .text p {
+		font-size: 1.025rem;
+	}
+}
+@media (max-width: 767px) {
+	main {
+		grid-template-columns: 1fr;
+		gap: 5%;
+		padding: 4.375rem;
+	}
+	main .text {
+		text-align: center;
+	}
+}
+@media (max-width: 576px) {
+	header {
+		flex-direction: column;
+	}
+	header h1 {
+		margin-bottom: 0.9375rem;
+	}
+	main .text h2 {
+		font-size: 1.5625rem;
+	}
+	main .text p {
+		font-size: 0.925rem;
+	}
+}
+@media (max-width: 400px) {
+	header {
+		padding: 0.675rem 1.25rem 0;
+	}
+	header a {
+		font-size: 1.05rem;
+	}
+	main {
+		padding: 3.125rem 0 ;
+	}
+	main .text {
+		margin-top: 50px;
+	}
+}
+/* 
+  End Media
+ */
+.wallpapers {
+	padding: 100px 0;
+}
+.wallpapers .container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+	gap: 2%;
+}
+.wallpapers {
+}
+.wallpapers img {
+	max-width: 100%;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+.wallpapers img:hover {
+	transform: scale(1.1);
+	box-shadow: 0 0 0 5px #ffffff, 0 0 50px 10px #1a1a1a;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+}
+/*
+  Start Media
+*/
+@media (max-width: 991px) {
+	.wallpapers .container {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+		gap: 2%;
+	}
+}
+/*
+  End Media
+*/
